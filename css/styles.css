@@ -101,6 +101,27 @@ a {
   margin-bottom: 1rem;
 }
 
+/* Icons */
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon-container {
+  background-color: #f3f9f1;
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 1024px) {
   /* typography */
   body {
@@ -127,7 +148,7 @@ a {
   }
 
   /* lists */
-  .list--tick .list__item{
+  .list--tick .list__item {
     padding-left: 0;
   }
 }
