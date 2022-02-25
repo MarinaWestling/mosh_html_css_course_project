@@ -1,16 +1,74 @@
 :root {
   /* Choose Primary, Secondary and Accent Colors */
-  --color-primary: #2584ff;
-  --color-secondary: #00d9ff;
-  --color-accent: #ff3400;
-  --color-headings: #1b0760;
+  /* Main Colors */
+  --color-primary: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness)
+  );
+
+  --color-secondary: hsl(
+    var(--secondary-hue),
+    var(--secondary-saturation),
+    var(--primary-lightness)
+  );
+
+  --color-accent: hsl(
+    var(--accent-hue),
+    var(--accent-saturation),
+    var(--accent-lightness)
+  );
+
+  --color-headings: hsl(
+    var(--heading-hue),
+    var(--heading-saturation),
+    var(--heading-lightness)
+  );
+
+  --font-color-button: hsl(
+    var(--button-hue),
+    var(--button-saturation),
+    var(--button-lightness)
+  );
   --color-body: #918ca4;
+
+  /* Lightness Level for Hover */
+  --color-lighten: 4%;
+
+  /* Color Identifiers */
+  /* For Primary */
+  --primary-hue: 214;
+  --primary-saturation: 100%;
+  --primary-lightness: 57%;
+
+  /* For Secondary */
+  --secondary-hue: 189;
+  --secondary-saturation: 100%;
+  --secondary-lightness: 50%;
+
+  /* For Accent */
+  --accent-hue: 12;
+  --accent-saturation: 100%;
+  --accent-lightness: 50%;
+
+  /* For Heading Color */
+  --heading-hue: 253;
+  --heading-saturation: 86%;
+  --heading-lightness: 20%;
+
+  /* Button Text Color */
+  --button-hue: 0;
+  --button-saturation: 0%;
+  --button-lightness: 100%;
 }
 
 /* typography */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
@@ -113,13 +171,82 @@ a {
 }
 
 .icon-container {
-  background-color: #f3f9f1;
-  width: 64px;
-  height: 64px;
-  display: inline-flex;
-  border-radius: 100%;
-  justify-content: center;
   align-items: center;
+  background-color: #f3f9f1;
+  border-radius: 100%;
+  display: inline-flex;
+  height: 64px;
+  justify-content: center;
+  width: 64px;
+}
+
+/* Buttons */
+.button {
+  background: hsla(0, 0%, 0%, 0);
+  border-radius: 2rem;
+  color: var(--color-headings);
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.2rem 4rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  margin: 1rem 0;
+}
+.button:hover {
+  transition: background 0.15s;
+}
+
+.button-plain:hover {
+  background: hsla(0, 0%, 0%, 0.02);
+}
+
+.button-block {
+  width: 100%;
+  display: inline-block;
+}
+
+.button-primary {
+  background: var(--color-primary);
+  border: none;
+  color: white;
+}
+
+.button-primary:hover {
+  background: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    calc(var(--primary-lightness) + var(--color-lighten))
+  );
+}
+
+.button-accent {
+  background: var(--color-accent);
+  border: none;
+  color: white;
+}
+
+.button-accent:hover {
+  background: hsl(
+    var(--accent-hue),
+    var(--accent-saturation),
+    calc(var(--accent-lightness) + var(--color-lighten))
+  );
+}
+
+.button-secondary {
+  background: var(--color-headings);
+  border: none;
+  color: white;
+}
+
+.button-secondary:hover {
+  background: hsl(
+    var(--heading-hue),
+    var(--heading-saturation),
+    calc(var(--heading-lightness) + var(--color-lighten))
+  );
 }
 
 @media screen and (min-width: 1024px) {
@@ -150,5 +277,10 @@ a {
   /* lists */
   .list--tick .list__item {
     padding-left: 0;
+  }
+
+  /* buttons */
+  .button {
+    font-size: 1.5rem;
   }
 }
