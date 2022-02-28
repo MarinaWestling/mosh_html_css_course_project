@@ -198,7 +198,7 @@ a {
 /* Buttons */
 .button {
   background: hsla(0, 0%, 0%, 0);
-  border-radius: 2rem;
+  border-radius: 3rem;
   color: var(--color-headings);
   cursor: pointer;
   font-size: 1.8rem;
@@ -217,18 +217,22 @@ a {
   background: hsla(0, 0%, 0%, 0.02);
 }
 
+.button-stretched {
+  padding: 1.4rem 6rem;
+}
+
 .button-block {
   width: 100%;
   display: inline-block;
 }
 
-.button-primary {
+.button--primary {
   background: var(--color-primary);
   border: none;
   color: white;
 }
 
-.button-primary:hover {
+.button--primary:hover {
   background: hsl(
     var(--primary-hue),
     var(--primary-saturation),
@@ -236,13 +240,13 @@ a {
   );
 }
 
-.button-accent {
+.button--accent {
   background: var(--color-accent);
   border: none;
   color: white;
 }
 
-.button-accent:hover {
+.button--accent:hover {
   background: hsl(
     var(--accent-hue),
     var(--accent-saturation),
@@ -250,13 +254,27 @@ a {
   );
 }
 
-.button-secondary {
+.button--secondary {
+  background: var(--color-secondary);
+  border: none;
+  color: white;
+}
+
+.button--secondary:hover {
+  background: hsl(
+    var(--secondary-hue),
+    var(--secondary-saturation),
+    calc(var(--secondary-lightness) + var(--color-lighten))
+  );
+}
+
+.button--dark {
   background: var(--color-headings);
   border: none;
   color: white;
 }
 
-.button-secondary:hover {
+.button--dark:hover {
   background: hsl(
     var(--heading-hue),
     var(--heading-saturation),
@@ -451,6 +469,32 @@ a {
   margin-bottom: 1rem;
 }
 
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.callout--primary {
+  background: var(--color-primary);
+  color: var(--font-color-button);
+}
+
+.callout__heading {
+  color: var(--font-color-button);
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .button {
+  align-self: center;
+  justify-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
 /* Large Mobile Devices */
 @media screen and (min-width: 480px) {
   .testimonial__quote-image {
@@ -478,6 +522,19 @@ a {
   }
   .testimonial .quote__author {
     font-size: 2.4rem;
+  }
+
+  /* Callouts */
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .button {
+    justify-self: start;
+    margin: 0 2rem;
+  }
+  .callout .grid--cols-2 {
+    grid-template-columns: 1fr auto;
   }
 }
 
