@@ -404,6 +404,20 @@ a {
   margin: 0 2rem;
 }
 
+/* Grids */
+.grid {
+  display: grid;
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+  /* Grids */
+  .grid--cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktops */
 @media screen and (min-width: 1024px) {
   /* typography */
   body {
@@ -467,5 +481,10 @@ a {
   }
   .quote__company {
     font-size: 1.6rem;
+  }
+
+  /* Grids */
+  .grid--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
