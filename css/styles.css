@@ -195,6 +195,10 @@ a {
   fill: var(--font-color-button);
 }
 
+.icon--white {
+  fill: var(--font-color-button);
+}
+
 /* Buttons */
 .button {
   background: hsla(0, 0%, 0%, 0);
@@ -506,6 +510,26 @@ a {
   font-size: 3rem;
 }
 
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.collapsible__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0deg);
+}
+
+.collapsible--expanded .collapsible__body {
+  max-height: 100vh;
+  opacity: 1;
+}
 /* Large Mobile Devices */
 @media screen and (min-width: 480px) {
   .testimonial__quote-image {
