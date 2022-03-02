@@ -111,6 +111,8 @@ a {
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
+  display: inline-block;
+  margin-top: 3rem;
 }
 
 .link-arrow::after {
@@ -709,6 +711,24 @@ a {
   transform: scale(1.05);
 }
 
+/* Featured Block */
+
+.feature__component:first-of-type {
+  margin-top: 6rem;
+}
+.feature__component {
+  gap: 4rem 2rem;
+  align-items: center;
+  margin: 12rem 0;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
 /* Large Mobile Devices */
 @media screen and (min-width: 480px) {
   .testimonial__quote-image {
@@ -779,6 +799,11 @@ a {
   /* Domain Prices */
   .domain-lookup__prices {
     grid-template-columns: repeat(auto-fit, minmax(1.5rem, 1fr));
+  }
+
+  /* Feature Component */
+  .feature__component:nth-of-type(even) .info-block {
+    order: 2;
   }
 }
 
