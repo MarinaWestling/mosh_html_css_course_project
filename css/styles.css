@@ -25,7 +25,7 @@
     var(--heading-lightness)
   );
 
-  --font-color-button: hsl(
+  --font-color-light: hsl(
     var(--button-hue),
     var(--button-saturation),
     var(--button-lightness)
@@ -89,6 +89,7 @@ h2,
 h3 {
   color: var(--color-headings);
   margin: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -188,15 +189,15 @@ a {
 
 .icon-container--accent {
   background: var(--color-accent);
-  fill: var(--font-color-button);
+  fill: var(--font-color-light);
 }
 .icon-container--accent .icon {
   background: var(--color-accent);
-  fill: var(--font-color-button);
+  fill: var(--font-color-light);
 }
 
 .icon--white {
-  fill: var(--font-color-button);
+  fill: var(--font-color-light);
 }
 
 /* Buttons */
@@ -331,17 +332,17 @@ a {
 
 .card--primary .card__header {
   background: var(--color-primary);
-  color: var(--font-color-button);
+  color: var(--font-color-light);
 }
 
 .card--secondary .card__header {
   background: var(--color-secondary);
-  color: var(--font-color-button);
+  color: var(--font-color-light);
 }
 
 /* Plans */
 .plan__title {
-  color: var(--font-color-button);
+  color: var(--font-color-light);
   margin: 0;
   font-weight: 500;
   font-size: 2.4rem;
@@ -481,11 +482,11 @@ a {
 }
 .callout--primary {
   background: var(--color-primary);
-  color: var(--font-color-button);
+  color: var(--font-color-light);
 }
 
 .callout__heading {
-  color: var(--font-color-button);
+  color: var(--font-color-light);
   margin-top: 0;
   font-size: 3rem;
 }
@@ -553,7 +554,7 @@ a {
   color: #7b858b;
 }
 .block--dark .block__heading {
-  color: var(--font-color-button);
+  color: var(--font-color-light);
 }
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
@@ -611,6 +612,22 @@ a {
   transition: box-shadow 0.2s;
 }
 
+/* Heroes */
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.hero {
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+}
+
 /* Large Mobile Devices */
 @media screen and (min-width: 480px) {
   .testimonial__quote-image {
@@ -666,10 +683,22 @@ a {
   .nav__item {
     border: 0;
   }
+  /* Heroes */
+  .hero {
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+    padding-bottom: calc(var(--padding-vertical) + 8rem);
+    padding-top: 0;
+  }
+
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
 }
 
 /* Large Tablets */
 @media screen and (min-width: 860px) {
+  /* Testimonials */
   .testimonial__quote-image {
     right: calc(calc((100% - 373px) / 2) + 19%);
   }
