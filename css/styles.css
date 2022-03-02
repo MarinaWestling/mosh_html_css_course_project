@@ -38,7 +38,7 @@
   --border-radius: 30px;
 
   /* Lightness Level for Hover */
-  --color-lighten: 4%;
+  --color-lighten: 10%;
 
   /* Color Identifiers */
   /* For Primary */
@@ -228,7 +228,14 @@ a {
 }
 
 .button-plain:hover {
-  background: hsla(0, 0%, 0%, 0.02);
+  background: hsl(
+    var(--heading-hue),
+    var(--heading-saturation),
+    calc(var(--heading-lightness) + var(--color-lighten))
+  );
+  border: none;
+  color: var(--font-color-light);
+  transition: all 0.3s;
 }
 
 .button-stretched {
@@ -386,6 +393,13 @@ a {
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
+.card__body .button {
+  vertical-align: bottom;
+}
 
 .plan--popular .card__header {
   position: relative;
@@ -397,7 +411,7 @@ a {
   display: inline-block;
   position: absolute;
   top: -3px;
-  right: 5%;
+  right: 2%;
 }
 
 /* Quotes */
@@ -673,6 +687,28 @@ a {
     calc(var(--heading-lightness) + 20%)
   );
 }
+
+/* Plan Block */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.plans__block .grid {
+  gap: 8rem 4rem;
+}
+
+.plans__block .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.card__body .list {
+  height: 35rem;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
 /* Large Mobile Devices */
 @media screen and (min-width: 480px) {
   .testimonial__quote-image {
@@ -808,6 +844,9 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
+  .card__body .list {
+    height: 28rem;
+  }
 
   /* Quotes */
   .quote {
@@ -823,5 +862,14 @@ a {
   /* Grids */
   .grid--cols-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Plans Block */
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
+  .plan--popular:hover {
+    transform: scale(1.15);
   }
 }
