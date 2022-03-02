@@ -214,6 +214,15 @@ a {
   text-align: center;
   margin: 1rem 0;
 }
+
+.button .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .button:hover {
   transition: background 0.15s;
 }
@@ -310,12 +319,16 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 /* decrease margin on button if it is in the input group */
 .input-group .button {
   margin: 3px;
+}
+
+.input--shadowed {
+  box-shadow: 0 0 20px 5px #e6ebee;
 }
 
 /* Cards */
@@ -628,6 +641,38 @@ a {
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
 }
 
+/* Domain Lookup */
+.domain-lookup .input-group {
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.domain-lookup__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  justify-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.domain-lookup__prices .badge {
+  font-size: 2rem;
+}
+
+.domain-lookup__prices a {
+  color: var(--color-headings);
+  transition: color 0.3s;
+}
+
+.domain-lookup__prices a:hover {
+  color: hsl(
+    var(--heading-hue),
+    var(--heading-saturation),
+    calc(var(--heading-lightness) + 20%)
+  );
+}
 /* Large Mobile Devices */
 @media screen and (min-width: 480px) {
   .testimonial__quote-image {
@@ -693,6 +738,11 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+
+  /* Domain Prices */
+  .domain-lookup__prices {
+    grid-template-columns: repeat(auto-fit, minmax(1.5rem, 1fr));
   }
 }
 
