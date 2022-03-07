@@ -649,7 +649,7 @@ a {
 }
 
 .nav__item {
-  padding: 2rem 2rem;
+  padding: 0.5em;
   border-bottom: 1px solid #222;
 }
 
@@ -822,6 +822,7 @@ a {
   background: #232323;
   padding-top: 30rem;
   margin-bottom: 0;
+  padding-bottom: 3rem;
 }
 
 .footer__nav .collapsible__heading {
