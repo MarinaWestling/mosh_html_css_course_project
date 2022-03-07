@@ -573,6 +573,7 @@ a {
 .container {
   max-width: 1140px;
   margin: auto;
+  padding: 0 3rem;
 }
 
 .block {
@@ -734,11 +735,15 @@ a {
 }
 
 /* Featured Block */
+.feature__block {
+  margin-top: 6rem;
+}
+
 .feature__component:first-of-type {
   margin-top: 6rem;
 }
 .feature__component {
-  gap: 4rem 2rem;
+  gap: 4rem;
   align-items: center;
   margin: 12rem 0;
 }
