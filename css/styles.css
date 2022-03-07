@@ -216,7 +216,7 @@ a {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 1.2rem 4rem;
+  padding: 1.2rem min(4vw, 5rem);
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
@@ -332,6 +332,7 @@ a {
 
 /* remove border on input if it is in an inout-group */
 .input-group .input {
+  width: 0;
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
@@ -569,22 +570,25 @@ a {
 }
 
 /* Blocks */
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
 .block {
   --padding-vertical: 6rem;
-  padding: var(--padding-vertical) 2rem;
+  margin-bottom: var(--padding-vertical);
+  padding-top: 3rem;
 }
 
 .block__heading {
   margin-top: 0;
+  font-size: 3.5rem;
 }
 
 .block__header {
   text-align: center;
   margin-bottom: 4rem;
-}
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
 }
 .block--dark {
   background: black;
@@ -632,7 +636,7 @@ a {
 }
 
 .nav__item {
-  padding: 0.5rem 2rem;
+  padding: 2rem 2rem;
   border-bottom: 1px solid #222;
 }
 
@@ -661,22 +665,29 @@ a {
 }
 
 .hero__image {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .hero {
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+  text-align: center;
+}
+
+.hero .block__heading {
+  margin-left: 0;
 }
 
 /* Domain Lookup */
 .domain-lookup .input-group {
-  margin: 4rem auto;
+  margin: 3rem;
   max-width: 670px;
 }
 
 .domain-lookup__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   font-size: 2rem;
@@ -903,11 +914,17 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+    padding: 0 3rem;
   }
 
   /* Domain Prices */
   .domain-lookup__prices {
-    grid-template-columns: repeat(auto-fit, minmax(1.5rem, 1fr));
+    grid-template-columns: repeat(3, minmax(1.5rem, 1fr));
+  }
+
+  .domain-lookup .input-group {
+    margin: 5rem auto;
+    max-width: 670px;
   }
 
   /* Feature Component */
@@ -989,6 +1006,12 @@ a {
 
   .footer__collapsible-list a {
     overflow-wrap: break-word;
+  }
+
+  /* Page Header */
+  .page__header .nav__list {
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -1081,5 +1104,23 @@ a {
 
   .plan--popular:hover {
     transform: scale(1.15);
+  }
+
+  /* Domain Lookup */
+  .domain-lookup__prices {
+    grid-template-columns: repeat(auto-fit, minmax(1.5rem, 1fr));
+  }
+
+  .domain-lookup {
+    margin-bottom: 3rem;
+  }
+
+  /* Hero */
+  .hero {
+    --hero-height: 40vh;
+    max-height: var(--hero-height);
+  }
+  .hero__image {
+    max-height: calc(var(--hero-height) - calc(var(--padding-vertical) + 4rem));
   }
 }

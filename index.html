@@ -21,7 +21,133 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-
+    <header class="page__header">
+      <nav class="nav collapsible">
+        <a href="/"><img class="nav__logo" src="images/logo.svg" alt="Moshify Logo"></a>
+        <svg class="icon icon--white nav__toggler">
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__body">
+          <li class="nav__item"><a href="#">Hosting</a></li>
+          <li class="nav__item"><a href="#">VPS</a></li>
+          <li class="nav__item"><a href="#">Domain</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="block block--dark block--skewed-left hero">
+      <header class="grid grid--cols-2 container">
+        <div class="block__header hero__content">
+          <h1 class="block__heading">Cloud Hosting for Pros</h1>
+          <p class="hero__tagline">Deploy your website in less than 60 seconds.</p>
+          <a href="#" class="button button--accent button--stretched">Get Started</a>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="images/banner/banner.webp 1x, images/banner/banner@2x.webp 2x, images/banner/banner@3x.webp 3x">
+          <source type="image/png" srcset="images/banner/banner.png 1x, images/banner/banner@2x.png 2x, images/banner/banner@3x.png 3x">
+          <img src="images/banner/banner.png" alt="" class="hero__image">
+        </picture>
+      </header>
+    </section>
+    <section class="block container domain-lookup">
+      <header class="block__header">
+        <h2 class="block__heading">Starting at $9 per month</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, ratione.</p>
+      </header>
+      <div class="input-group input--shadowed">
+        <input class="input" placeholder="Enter domain name here" type="text">
+        <button class="button button--accent">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>Search
+        </button>
+      </div>
+      <ul class="list domain-lookup__prices">
+        <li>.sg $10</li>
+        <li><span class="badge badge--secondary">.com $9</span></li>
+        <li>.space $11</li>
+        <li>.info $14</li>
+        <li>.net $10</li>
+        <li>.xyz $10</li>
+        <li><a href="#">More</a></li>
+      </ul>
+    </section>
+    <section class="block container plans__block">
+      <div class="grid grid--cols-3">
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__title">Entry</h3>
+              <span class="plan__price">$14</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--secondary badge--small">10% off</span>
+              <div class="plan__description">
+                Easy start on the cloud
+              </div>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Ulimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB Ram</li>
+              </ul>    
+              <button class="button button-block button-plain">
+                Buy Now
+              </button>        
+            </div>
+          </div>
+        </div><div class="plan plan--popular">
+          <div class="card card--primary">
+            <header class="card__header">
+              <h3 class="plan__title">Business</h3>
+              <span class="plan__price">$24</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--primary badge--small">20% off</span>
+              <div class="plan__description">
+                Optimal Cloud Experience
+              </div>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Ulimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">5 GB Ram</li>
+                <li class="list__item">3 CPU Cores</li>
+              </ul>    
+              <button class="button button-block button--dark">
+                Buy Now
+              </button>        
+            </div>
+          </div>
+        </div><div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__title">Business Plus</h3>
+              <span class="plan__price">$54</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--secondary badge--small">10% off</span>
+              <div class="plan__description">
+                Easy start on the cloud
+              </div>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Ulimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB Ram</li>
+                <li class="list__item">2 CPU Cores</li>
+              </ul>    
+              <button class="button button-block button-plain">
+                Buy Now
+              </button>        
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="script/index.js"></script>
   </body>
 </html>
