@@ -138,6 +138,7 @@ a {
   font-weight: 600;
   padding: 0.5rem 2rem;
   white-space: nowrap;
+  transition: all 0.3s;
 }
 
 .badge--primary {
@@ -946,6 +947,10 @@ a {
   /* Domain Prices */
   .domain-lookup__prices {
     grid-template-columns: repeat(3, minmax(1.5rem, 1fr));
+  }
+
+  .domain-lookup__prices li {
+    cursor: pointer;
   }
 
   .domain-lookup .input-group {
