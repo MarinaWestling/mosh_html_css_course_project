@@ -1,3 +1,5 @@
 /Notes.docx
 /~$Notes.docx
-node_modules
+node_modules/
+dist/
+.cache/
