@@ -10,3 +10,4 @@ script/
 package.json
 package-lock.json
 index.html
+dist
