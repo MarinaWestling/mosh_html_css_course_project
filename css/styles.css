@@ -219,6 +219,7 @@ a {
   font-weight: 600;
   padding: 1.2rem min(4vw, 5rem);
   text-transform: uppercase;
+  user-select: none;
   white-space: nowrap;
   text-align: center;
   margin: 1rem 0;
