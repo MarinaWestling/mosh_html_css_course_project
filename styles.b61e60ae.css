@@ -166,7 +166,7 @@ a {
 }
 
 .list--tick {
-  list-style-image: url(/tick.2a1a279a.svg);
+  list-style-image: url(tick.2a1a279a.svg);
   padding-left: 3rem;
 }
 
@@ -417,7 +417,7 @@ a {
 }
 
 .plan--popular .card__header::before {
-  content: url(/popular.ef67f06e.svg);
+  content: url(popular.ef67f06e.svg);
   width: 40px;
   display: inline-block;
   position: absolute;
