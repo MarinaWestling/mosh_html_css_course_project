@@ -1,5 +1,11 @@
 /Notes.docx
 /~$Notes.docx
 node_modules/
-dist/
 .cache/
+components/
+css/
+images/
+script/
+.htmlnanorc
+package.json
+package-lock.json
